@@ -1,0 +1,13 @@
+Yığın (Stack):
+Yığın, verilerin son giren ilk çıkar (Last-In-First-Out, LIFO) şeklinde çalışır. En son eklenen veri, yığının tepesinde (top) bulunur ve çıkarma işlemi de yine tepeden yapılır
+Yığın veri yapısı, birbirine bağlı veri elemanlarından oluşur ve her ekleme veya çıkarma işlemi yalnızca yığının tepesinde gerçekleştirilir.
+
+Kuyruk (Queue):
+Kuyruk, verilerin ilk giren ilk çıkar (First-In-First-Out, FIFO) şekilde çalışır. En önce eklenen veri, kuyruğun başında (front) bulunur ve çıkarma işlemi de yine baştan yapılır.
+Kuyruk veri yapısı, birbirine bağlı veri elemanlarından oluşur ve her ekleme işlemi kuyruğun sonuna (rear) yapılırken, çıkarma işlemi baştan gerçekleştirilir
+
+Farklılıkları;
+-Yığında veri eklemesi ve çıkarması yalnızca tepeden yapılırken, kuyruğun veri eklemesi sona, çıkarması ise baştan gerçekleştirilir.
+-Yığın LIFO (Last-In-First-Out) şekline göre çalışırken, kuyruk FIFO (First-In-First-Out) şeklinde çalışır.
+-Yığın veri yapısı sadece bir giriş ve bir çıkış noktasına sahiptir (tepe), kuyruk ise iki noktaya sahiptir (baş ve son).
+-Yığın veri ekledikçe büyüyebilirken, kuyrukta sabit bir boyut olabileceği gibi dinamik olarak da büyüyebilir.
