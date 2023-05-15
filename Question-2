@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int binarySearch(int dizi[], int x, int y, int t) {
+    if (y >= x) {
+        int orta = x + (y - x) / 2;                    /*orta değişkeni her adımda dizinin orta noktasını temsil eder*/
+ 
+        if (dizi[orta] == t)
+            return orta;
+ 
+        if (dizi[orta] > t)
+            return binarySearch(dizi, x, orta - 1, t);
+ 
+        return binarySearch(dizi, orta + 1, y, t);
+    }
+
+    return -1;
+}
+
+int main() {
+    int dizi[]={4,8,3,84,47,76,9,24,68};
+    int n = sizeof(dizi) / sizeof(dizi[0]);
+    int t = 76;                                      /*yukarıda ki sayılardan ''t'' değişkeni 76 olarak belirledim. dizi de ki diğer elemanlar da istediğimiz gibi değişir*/
+    int sonuc = binarySearch(dizi, 0, n - 1, t);
+    if (sonuc == -1) {
+        printf("t eleman dizide yok\n");
+    } else {
+        printf("t eleman dizinin %d. indeksinde\n", sonuc);
+    }
+    return 0;
+}
