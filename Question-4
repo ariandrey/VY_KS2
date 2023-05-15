@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+void ekleme(int sayi1, int sayi2) {
+    printf("%d + %d = %d\n", sayi1, sayi2, sayi1 + sayi2);
+}
+
+void silme(int sayi1, int sayi2) {
+    printf("%d - %d = %d\n", sayi1, sayi2, sayi1 - sayi2);
+}
+
+
+void goruntuleme() {
+    int sayi;
+    printf("Lütfen bir sayı girin: ");
+    scanf("%d", &sayi);
+    printf("Girdiğiniz sayı: %d\n", sayi);
+}
+
+int main() {
+    int secim, sayi1, sayi2;
+    while(1) {
+        printf("1. Ekleme\n");
+        printf("2. Silme\n");
+        printf("3. Görüntüleme\n");
+        printf("4. Çıkış\n");
+        printf("Seçiminiz: ");
+        scanf("%d", &secim);
+        switch(secim) {
+            case 1:
+                printf("Lütfen iki sayı girin: ");
+                scanf("%d %d", &sayi1, &sayi2);
+                ekleme(sayi1, sayi2);
+                break;
+            case 2:
+                printf("Lütfen iki sayı girin: ");
+                scanf("%d %d", &sayi1, &sayi2);
+                silme(sayi1, sayi2);
+                break;
+            case 3:
+                goruntuleme();
+                break;
+            case 4:
+                printf("Programdan çıkılıyor\n");
+                return 0;
+            default:
+                printf("Geçersiz seçim\n");
+                break;
+        }
+    }
+    return 0;
+}
